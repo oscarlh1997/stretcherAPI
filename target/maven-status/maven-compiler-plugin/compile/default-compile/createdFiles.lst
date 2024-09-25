@@ -1,0 +1,5 @@
+com\stretcher\service\StretcherService.class
+com\stretcher\bean\PriceInformation.class
+com\stretcher\SpringBootCrudApplication.class
+com\stretcher\controller\StretcherController.class
+com\stretcher\swagger\SwaggerConfiguration.class
