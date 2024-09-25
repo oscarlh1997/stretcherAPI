@@ -1,10 +1,13 @@
 package com.stretcher.service;
 
 
+
 import com.stretcher.bean.PriceInformation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class StretcherService {
 
     public PriceInformation getPriceInformation(String type, double width, double height) {
@@ -26,10 +29,7 @@ public class StretcherService {
         double subTotalCalculation = (width + height) * 0.68;
         double ivaCalculation = subTotalCalculation * 0.21;
 
-        return PriceInformation.builder().
-                subtotal(roundUp(subTotalCalculation)).
-                total(roundUp(subTotalCalculation + ivaCalculation)).
-                iva(roundUp(ivaCalculation)).build();
+        return PriceInformation.builder().subtotal(roundUp(subTotalCalculation)).total(roundUp(subTotalCalculation + ivaCalculation)).iva(roundUp(ivaCalculation)).build();
     }
 
     private PriceInformation getBAS_6_2TPriceInformation(double width, double height){

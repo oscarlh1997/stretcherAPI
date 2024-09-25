@@ -8,7 +8,6 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,9 +15,8 @@ import org.springframework.web.bind.annotation.*;
 public class StretcherController {
 
 
-	StretcherService stretcherService;
+	private final StretcherService stretcherService;
 
-	@Autowired
 	public StretcherController(StretcherService stretcherService) {
 		this.stretcherService = stretcherService;
 	}

@@ -1,9 +1,13 @@
 package com.stretcher.bean;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.*;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-@Data
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

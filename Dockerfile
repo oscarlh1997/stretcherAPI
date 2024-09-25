@@ -1,14 +1,6 @@
 # Usa una imagen base de Java
-FROM openjdk:17-jdk-slim
+FROM openjdk:23
 
-# Establece el directorio de trabajo
-WORKDIR /app
+COPY target/SpringBootCRUD-0.0.1-SNAPSHOT.jar app.jar
 
-# Copia el archivo JAR generado en el directorio de trabajo
-COPY target/tu-aplicacion.jar app.jar
-
-# Expone el puerto en el que se ejecutará tu aplicación
-EXPOSE 8080
-
-# Comando para ejecutar la aplicación
-CMD ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
